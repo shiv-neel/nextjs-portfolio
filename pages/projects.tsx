@@ -3,7 +3,7 @@ import React from 'react'
 
 const Projects = () => {
   return (
-      <div className='flex text-center mx-auto'>
+      <div className='flex text-center mx-48'>
         <Heading as='h1' size='xl' className='flex justify-start p-20'>Personal Projects</Heading>
       </div>
   )

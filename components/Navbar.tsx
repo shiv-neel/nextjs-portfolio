@@ -1,21 +1,18 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { BsSun, BsHouse, BsPerson, BsPuzzle } from 'react-icons/bs'
 import { IconButton, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { FaRegPaperPlane } from 'react-icons/fa'
 import { MdOutlineDarkMode } from 'react-icons/md'
 import Logo from './Logo'
+import { useRouter } from 'next/router'
 
 const Navbar = () => {
     
   const { colorMode, toggleColorMode } = useColorMode()
-
-  const [activeState, setActiveState] = useState<String>('home')
-
-  const toggleNavColor = (page: String) => {
-    setActiveState(page)
-  }
-  
+  const router = useRouter()
+  const inactive = 'transition duration-200 hover:scale-110 hover:text-blue-500 hover:font-bold'
+  const active = 'text-blue-500 font-bold'
   return (
       <nav className='flex flex-row justify-between pt-16 mx-20 align-middle'>
         <div className='flex items-center'>
@@ -25,39 +22,27 @@ const Navbar = () => {
         </div>
         <ul className='flex items-center align-center gap-16'>
        
-            <li className={activeState==='home' ? 'text-blue-500 font-bold ' : '' + 
-            'transition duration-200 hover:scale-110 hover:text-blue-500 hover:font-bold'}>
+            <li className={router.pathname === '/' ? active : inactive}>
                 <Link href='/'>
-                    <a className='flex gap-2' onClick={() => toggleNavColor('home')}>
+                    <a className='flex gap-2'>
                         <BsHouse style={{fontSize: 20}} className='mt-0.5'/>
                         Home
                     </a>
                 </Link>
             </li>
-            <li className={activeState==='about' ? 'text-blue-500 font-bold ' : '' + 
-            'transition duration-200 hover:scale-110 hover:text-blue-500 hover:font-bold'}>
+            <li className={router.pathname === '/about' ? active : inactive}>
                 <Link href='/about'>
-                    <a className='flex gap-2' onClick={() => toggleNavColor('about')}>
+                    <a className='flex gap-2'>
                         <BsPerson style={{fontSize: 20}} className='mt-0.5'/>
                         About
                     </a>
                 </Link>
             </li>
-            <li className={activeState==='projects' ? 'text-blue-500 font-bold ' : '' + 
-            'transition duration-200 hover:scale-110 hover:text-blue-500 hover:font-bold'}>
+            <li className={router.pathname === '/projects' ? active : inactive}>
                 <Link href='/projects'>
-                    <a className='flex gap-2' onClick={() => toggleNavColor('projects')}>
+                    <a className='flex gap-2'>
                         <BsPuzzle style={{fontSize: 20}} className='mt-0.5'/>
                         Projects
-                    </a>
-                </Link>
-            </li>
-            <li className={activeState==='contact' ? 'text-blue-500 font-bold ' : '' + 
-            'transition duration-200 hover:scale-110 hover:text-blue-500 hover:font-bold'}>
-                <Link href='/contact'>
-                    <a className='flex gap-2' onClick={() => toggleNavColor('contact')}>
-                        <FaRegPaperPlane style={{fontSize: 20}} className='mt-0.5'/>
-                        Contact
                     </a>
                 </Link>
             </li>
