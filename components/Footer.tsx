@@ -1,6 +1,8 @@
 import React from "react"
 import { BsGithub, BsLinkedin } from "react-icons/bs"
 import { BiCopyright } from 'react-icons/bi'
+import Link from "next/link"
+import { FaInfoCircle } from "react-icons/fa"
 
 const Footer = () => {
   return (
@@ -11,16 +13,19 @@ const Footer = () => {
         </div>
       <ul className='flex gap-4 justify-center items-center'>
         <a
-          href='https://github.com/shiv-neel'
+          href='https://github.com/shiv-neel' target='_blank' rel='noopener noreferrer'
           className='transition duration-200 hover:scale-125 hover:text-blue-500'
         >
-          <BsGithub className="text-2xl"/>
+          <BsGithub className='text-2xl'/>
         </a>
         <a
-          href='https://linkedin.com/in/shiva-neelakantan'
+          href='https://linkedin.com/in/shiva-neelakantan' target='_blank' rel='noopener noreferrer'
           className='transition duration-200 hover:scale-125 hover:text-blue-500'
         >
-          <BsLinkedin className="text-2xl"/>
+          <BsLinkedin className='text-2xl'/>
+        </a>
+        <a href='/info' className='transition duration-200 hover:scale-125 hover:text-blue-500'>
+          <FaInfoCircle className='text-2xl'/>
         </a>
       </ul>
     </footer>

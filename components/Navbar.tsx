@@ -14,11 +14,10 @@ const Navbar = () => {
   const inactive = 'transition duration-200 hover:scale-110 hover:text-blue-500 hover:font-bold'
   const active = 'text-blue-500 font-bold'
   return (
-      <nav className='flex flex-row justify-between pt-16 mx-20 align-middle'>
-        <div className='flex items-center'>
-            <Link href='/'>
-                <Logo />
-            </Link>
+      <nav className='flex justify-between pt-16 mx-20 align-middle'>
+        <div className='flex'>
+            <Link href='/'><Logo /></Link>
+            
         </div>
         <ul className='flex items-center align-center gap-16'>
        
@@ -46,6 +45,14 @@ const Navbar = () => {
                     </a>
                 </Link>
             </li>
+            <li className={router.pathname === '/contact' ? active : inactive}>
+                <Link href='/contact'>
+                    <a className='flex gap-2'>
+                        <FaRegPaperPlane style={{fontSize: 20}} className='mt-0.5'/>
+                        Contact
+                    </a>
+                </Link>
+            </li>
             <li className='shadow-lg shadow-blue-500/40 rounded-lg'>
                   <IconButton aria-label='dark mode button'
                       style={{fontSize: 20}}
@@ -53,6 +60,7 @@ const Navbar = () => {
                       icon={colorMode==='dark' ? <MdOutlineDarkMode /> : <BsSun />}
                   />
             </li>
+            
         </ul>
       </nav>
   )

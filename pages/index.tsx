@@ -27,15 +27,15 @@ export default function Home() {
       <div className='flex flex-row px-20'>
         <div>
         <p className='flex pt-5 pb-20 leading-relaxed'>
-          I'm a Fullstack Software Engineer from Chicago. I design solutions that streamline the increasingly complex parts of human life. 
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti laudantium earum asperiores quidem maiores distinctio, incidunt atque repellat quo qui voluptatibus.
+          I'm a Fullstack Software Engineer based in Chicagoland. I love designing solutions to streamline the increasingly complex parts of human life. Through actively learning how to appreciate the technology around me, I've come to better understand myself. 
+          
         </p>
         <div className='space-x-10'>
           <Link href='/projects'><Button colorScheme={'blue'} style={{padding: '25px'}}>See my Work</Button></Link>
           <Button leftIcon={<FaDownload />} variant='outline' style={{padding: '25px'}}> Download Resume</Button>
         </div>
         </div>
-        <div className='flex w-1/2 items-center mx-auto justify-start px-40'>
+        <div className='flex w-1/2 items-center ml-40 justify-start'>
           <LandingSVG />
         </div>
       </div>
