@@ -18,3 +18,29 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@layer utilities {
+  .navbar-toggle {
+    display: none;
+  }
+  .menu-dropdown {
+    display: none;
+  }  
+  @media (max-width: 1280px) {
+    .landing-svg {
+      display: none;
+    }
+  }
+  @media (max-width: 740px) {
+    .navbar-toggle {
+      display: flex;
+    }
+    .navbar-link {
+      display: none;
+    }
+    .menu-dropdown {
+      display: flex;
+    }
+  }
+
+}
