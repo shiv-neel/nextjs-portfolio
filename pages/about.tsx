@@ -31,13 +31,13 @@ const About = ({ image }) => {
 					</Box>
 					<div className='flex px-10 w-full flex-col text-lg items-center'>
 						<p className='leading-relaxed'>
-							Hey there! I'm Shiva Neelakantan, an aspiring software engineer
-							from the Chicago suburbs. I love designing solutions to streamline
-							the increasingly complex parts of our lives. As a developer, my
-							interests are fullstack web development, machine learning, and
-							UI/UX design. <br />
+							Hey there! I&apos;m Shiva Neelakantan, an aspiring software
+							engineer from the Chicago suburbs. I love designing solutions to
+							streamline the increasingly complex parts of our lives. As a
+							developer, my interests are fullstack web development, machine
+							learning, and UI/UX design. <br />
 							<br />
-							When I'm not working on personal projects or learning new
+							When I&apos;m not working on personal projects or learning new
 							frameworks, I enjoy reading books on economics and productivity,
 							playing analytical games like{' '}
 							<Link href='https://www.chess.com/member/sh_vn' passHref>

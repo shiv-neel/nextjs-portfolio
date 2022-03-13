@@ -4,7 +4,7 @@ import React from 'react'
 import NotionSVG from '../../images/notion-svg'
 import { SpotifySVG } from '../../images/spotify-svg'
 
-const NotionProject = () => {
+const IncrementProject = () => {
 	return (
 		<div className='mb-16 hover:scale-105 duration-150'>
 			<Box
@@ -16,33 +16,36 @@ const NotionProject = () => {
 				className='shadow-lg hover:shadow-xl duration-150'
 			>
 				<Box className='p-6'>
-					<Box className='pb-6 flex justify-center'>
-						<NotionSVG />
-					</Box>
-					<Box className='flex items-center gap-2'>
+					<Box className='pb-6 flex justify-center'></Box>
+					<Box className='flex items-center gap-2 flex-wrap'>
 						<Badge borderRadius='full' colorScheme='cyan' px={2} py={1}>
 							Typescript
 						</Badge>
 						<Badge borderRadius='full' colorScheme='green' px={2} py={1}>
-							Node.js
+							Next.js
 						</Badge>
-						<Badge borderRadius='full' colorScheme='gray' px={2} py={1}>
-							Crontab
+						<Badge borderRadius='full' colorScheme='purple' px={2} py={1}>
+							GraphQL
 						</Badge>
+						<Badge borderRadius='full' colorScheme='orange' px={2} py={1}>
+							Firebase
+						</Badge>
+						<Badge borderRadius='full' colorScheme='facebook' px={2} py={1}>
+							PostgreSQL
+						</Badge>
+
 						<Box className='text-gray-500 font-semibold tracking-wide text-xs ml-auto uppercase'>
-							Jan 2022
+							Mar 2022-Present
 						</Box>
 					</Box>
 					<Box className='text-2xl py-4 font-bold' as='h3'>
-						NotionHabits
+						INCREMENT++
 					</Box>
 					<Box>
-						An automated database for Notion workspaces that uses CRUD
-						operations to set up a fresh daily habit tracker each day using a
-						terminal-based cron job.
+						Coming Soon!
 						<br />
 						<br />
-						<Link href='https://github.com/shiv-neel/notionhabits' passHref>
+						<Link href='' passHref>
 							<a target='_blank' className='underline'>
 								View Github Repository
 							</a>
@@ -54,4 +57,4 @@ const NotionProject = () => {
 	)
 }
 
-export default NotionProject
+export default IncrementProject

@@ -29,11 +29,11 @@ const SpotifyProject = () => {
 							Node.js
 						</Badge>
 						<Box className='text-gray-500 font-semibold tracking-wide text-xs ml-auto uppercase'>
-							02.2022
+							Feb 2022
 						</Box>
 					</Box>
 					<Box className='text-2xl py-4 font-bold' as='h3'>
-						Spotify Playlist Tidier
+						PlaylisTidier
 					</Box>
 					<Box>
 						An application that optimizes a user's Spotify playlist by removing

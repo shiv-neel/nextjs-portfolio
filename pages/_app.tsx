@@ -8,10 +8,12 @@ import configTheme from '../styles/Theme'
 function MyApp({ Component, pageProps }) {
 
   return (
-    <ChakraProvider theme={configTheme}>
-        <Layout children={<Component {...pageProps} />} />
-    </ChakraProvider>
-  )
+		<ChakraProvider theme={configTheme}>
+			<Layout>
+				<Component {...pageProps} />
+			</Layout>
+		</ChakraProvider>
+	)
 }
 
 export default MyApp
