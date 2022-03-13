@@ -28,12 +28,11 @@ const Footer = () => {
 				>
 					<BsLinkedin className='text-2xl' />
 				</a>
-				<a
-					href='/info'
-					className='transition duration-200 hover:scale-125 hover:text-blue-500'
-				>
-					<FaInfoCircle className='text-2xl' />
-				</a>
+				<Link href='/info'>
+					<a className='transition duration-200 hover:scale-125 hover:text-blue-500'>
+						<FaInfoCircle className='text-2xl' />
+					</a>
+				</Link>
 			</ul>
 		</footer>
 	)

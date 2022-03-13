@@ -36,9 +36,9 @@ const SpotifyProject = () => {
 						PlaylisTidier
 					</Box>
 					<Box>
-						An application that optimizes a user's Spotify playlist by removing
-						any duplicate tracks while converting all tracks to explicit or
-						clean versions.
+						An application that optimizes a user&apos;s Spotify playlist by
+						removing any duplicate tracks while converting all tracks to
+						explicit or clean versions.
 						<br />
 						<br />
 					</Box>
