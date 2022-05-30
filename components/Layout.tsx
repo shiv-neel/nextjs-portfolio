@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 
 const Layout: React.FC = ({ children }) => {
   return (
-		<div className='min-h-screen flex flex-col'>
+		<div className='min-h-screen flex flex-col mx-96'>
 			<Navbar />
 			<div className='flex flex-1'>{children}</div>
 			{/* <Footer /> */}

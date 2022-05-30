@@ -2,7 +2,7 @@ import anime from 'animejs'
 import React, { useState, useEffect } from 'react'
 import Anime from 'react-animejs-wrapper'
 import '@fontsource/inconsolata'
-import { GoFileCode } from 'react-icons/go'
+import { IoMdPlanet } from 'react-icons/io'
 const Logo = () => {
 	return (
 		<>
@@ -14,7 +14,7 @@ const Logo = () => {
 					duration: 2000,
 				}}
 			>
-				<GoFileCode className='text-3xl' />
+				<IoMdPlanet className='text-3xl mr-2' color='#006AFF' />
 			</Anime>
 			<Anime
 				config={{
