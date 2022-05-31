@@ -1,6 +1,5 @@
 import { Box, Divider, Heading } from '@chakra-ui/react'
 import React from 'react'
-import ProjectGrid from '../components/ProjectGrid'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 
