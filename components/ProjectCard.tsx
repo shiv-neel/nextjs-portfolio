@@ -49,14 +49,24 @@ const ProjectCard: React.FC<ProjectCardType> = ({
 			<p className='text-lg'>{description}</p>
 			<Box className='flex mt-5 gap-5'>
 				<Button>
-					<a target='_blank' href={github} className='flex gap-3 items-center'>
+					<a
+						target='_blank'
+						rel='noreferrer'
+						href={github}
+						className='flex gap-3 items-center'
+					>
 						<BsGithub />
 						View Repository
 					</a>
 				</Button>
 				{demo && (
 					<Button colorScheme={'messenger'}>
-						<a target='_blank' href={demo} className='flex gap-3 items-center'>
+						<a
+							target='_blank'
+							rel='noreferrer'
+							href={demo}
+							className='flex gap-3 items-center'
+						>
 							<BsFillEyeFill />
 							Live Demo
 						</a>
