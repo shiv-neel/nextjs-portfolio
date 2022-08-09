@@ -10,7 +10,7 @@ import {
 } from 'react-icons/fa'
 const About = () => {
 	return (
-		<Box className='mt-28 justify-center'>
+		<Box className='mt-28 px-20 justify-center'>
 			<Heading as='h1' size='xl' className='flex mx-auto mb-12'>
 				About Me
 			</Heading>
@@ -49,16 +49,13 @@ const About = () => {
 							</a>
 						</Link>{' '}
 						on the piano.
-						<br />
-						<br />
-						<br />
 					</p>
 					<br />
 				</div>
 			</Box>
 			<Divider className='my-5' />
 			<ul>
-				<Heading as='h3' size='lg' className='py-5 flex justify-center'>
+				<Heading as='h3' size='lg' className='flex justify-center'>
 					Education
 				</Heading>
 				<li className='flex items-center gap-2 text-lg py-1 my-1 justify-center'>

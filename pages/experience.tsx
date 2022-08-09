@@ -1,10 +1,12 @@
 import { Box, Divider, Heading } from '@chakra-ui/react'
+import { NextPage } from 'next'
 import React from 'react'
-import { CgTrello } from 'react-icons/cg'
+import { CgLaptop } from 'react-icons/cg'
+import Experiences from '../components/Experiences'
 import Projects from '../components/Projects'
 import Skills from '../components/Skills'
 
-const Portfolio = () => {
+const Experience: NextPage = () => {
 	return (
 		<Box className='mt-28 px-20 justify-center'>
 			<Heading
@@ -12,21 +14,14 @@ const Portfolio = () => {
 				size='xl'
 				className='flex mx-auto mb-6 items-center gap-3'
 			>
-				<CgTrello />
-				Personal Projects
+				<CgLaptop />
+				Work Experience
 			</Heading>
 			<Box>
-				<Projects />
+				<Experiences />
 			</Box>
-			<Heading as='h1' size='xl' className='flex mx-auto mb-12'>
-				Tech Stack
-			</Heading>
-			<Box className='flex justify-center'>
-				<Skills />
-			</Box>
-			<Divider className='my-12' />
 		</Box>
 	)
 }
 
-export default Portfolio
+export default Experience

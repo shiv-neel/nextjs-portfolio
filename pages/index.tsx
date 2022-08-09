@@ -43,7 +43,7 @@ export default function Home() {
 				<p className='mt-20 leading-relaxed text-lg'>
 					<strong>
 						Through actively learning how to appreciate the technology around
-						me, I&apos;ve come to better understand the person I want to be.{' '}
+						me, I&apos;ve come to better understand myself.{' '}
 					</strong>
 					I&apos;m a Full-stack Software Engineer based in Chicagoland, aspiring
 					to execute ideas that advance my community and those I love.
@@ -76,7 +76,10 @@ export default function Home() {
 							Learn More
 						</Button>
 					</Link>
-					<Link href='/' passHref>
+					<Link
+						href='https://docs.google.com/document/d/1xPuskriTfGFY_mPQrF3gYMGnmM1nGCeSxP9TD1RFCvc/edit?usp=sharing'
+						passHref
+					>
 						<a target='_blank'>
 							<Button
 								leftIcon={<FaDownload />}

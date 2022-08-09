@@ -3,28 +3,32 @@ import Link from 'next/link'
 import React from 'react'
 import { BsFillEyeFill, BsGithub } from 'react-icons/bs'
 
-import { ProjectCardType } from './Projects'
+import { ExperienceCardType } from './Experiences'
 
-const ProjectCard: React.FC<ProjectCardType> = ({
+const ExperienceCard: React.FC<ExperienceCardType> = ({
 	title,
+	subtitle,
+	location,
 	description,
 	dates,
 	stack,
-	github,
-	demo,
 }) => {
 	const BadgeColors = {
 		React: 'cyan',
-		Node: 'green',
+		Dart: 'blue',
 		Redux: 'purple',
-		Graphql: 'pink',
-		PostgreSQL: 'blue',
-		Firebase: 'orange',
-		Python: 'yellow',
+		Kotlin: 'purple',
+		'Graph DBMS': 'red',
 		Typescript: 'blue',
+		Python: 'yellow',
+		PostgreSQL: 'blue',
+		Node: 'green',
+		Graphql: 'pink',
+		Firebase: 'orange',
 		Supabase: 'green',
 		Javascript: 'yellow',
-		Tensorflow: 'red',
+		TensorFlow: 'red',
+		NumPy: 'green',
 		'Jupyter Notebook': 'orange',
 	}
 
@@ -46,37 +50,13 @@ const ProjectCard: React.FC<ProjectCardType> = ({
 					))}
 				</Box>
 			</Box>
+			<p className='text-lg font-semibold'>{subtitle}</p>
 			<p className='text-gray-500 italic mb-3'>{dates}</p>
 			<p className='text-md'>{description}</p>
-			<Box className='flex mt-5 gap-5'>
-				<Button colorScheme={'messenger'}>
-					<a
-						target='_blank'
-						rel='noreferrer'
-						href={github}
-						className='flex gap-3 items-center'
-					>
-						<BsGithub />
-						View Repository
-					</a>
-				</Button>
-				{demo && (
-					<Button variant='outline' colorScheme={'messenger'}>
-						<a
-							target='_blank'
-							rel='noreferrer'
-							href={demo}
-							className='flex gap-3 items-center'
-						>
-							<BsFillEyeFill />
-							Live Demo
-						</a>
-					</Button>
-				)}
-			</Box>
+
 			<Divider my={8} />
 		</Box>
 	)
 }
 
-export default ProjectCard
+export default ExperienceCard

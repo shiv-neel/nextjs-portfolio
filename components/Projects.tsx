@@ -14,10 +14,20 @@ export interface ProjectCardType {
 const Projects = () => {
 	const PROJECTS: ProjectCardType[] = [
 		{
-			title: 'Chess AI',
-			description: 'A chess AI that uses a neural network to play chess.',
-			dates: 'Apr 2022 - Present',
-			stack: ['Python', 'Tensorflow', 'Typescript', 'React', 'Firebase'],
+			title: 'ATOMIC',
+			description:
+				'A unique self-improvement system intended to improve one’s self-discipline and habit formation techniques. Applied domain knowledge from two psychology books on motivation theory into application’s architecture.',
+			dates: 'May 2022 - Present',
+			stack: ['React', 'Typescript', 'Redux', 'PostgreSQL', 'Supabase'],
+			github: 'https://github.com/shiv-neel/atomic',
+			demo: 'https://atomic-nine.vercel.app',
+		},
+		{
+			title: 'Chess Engine',
+			description:
+				'A chess AI that implements a minimax algorithm to compute the best move in a chess position by searching up to five moves ahead.',
+			dates: 'June 2022 - August 2022',
+			stack: ['Python', 'Jupyter Notebook'],
 			github: 'https://github.com/shiv-neel/chess-online',
 		},
 		{

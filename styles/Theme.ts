@@ -6,6 +6,9 @@ const configTheme = extendTheme({
 		heading: 'Inter, sans-serif',
 		body: 'Inter, sans-serif',
 	},
+	colors: {
+		bg: {},
+	},
 })
 
 export default configTheme

@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { BsSun, BsHouse, BsPerson, BsPuzzle } from 'react-icons/bs'
 import { HiOutlineViewList } from 'react-icons/hi'
 import { IconButton, useColorMode } from '@chakra-ui/react'
-import { FaRegPaperPlane } from 'react-icons/fa'
+import { CgHome, CgLaptop, CgTrello, CgUser } from 'react-icons/cg'
 import { MdOutlineDarkMode } from 'react-icons/md'
 import Logo from './Logo'
 import { useRouter } from 'next/router'
@@ -33,7 +33,7 @@ const Navbar = () => {
 					<li className={router.pathname === '/' ? active : inactive}>
 						<Link href='/'>
 							<a className='flex gap-2 navbar-link'>
-								<BsHouse className='text-xl' />
+								<CgHome className='text-xl' />
 								Home
 							</a>
 						</Link>
@@ -41,28 +41,27 @@ const Navbar = () => {
 					<li className={router.pathname === '/about' ? active : inactive}>
 						<Link href='/about'>
 							<a className='flex gap-2 navbar-link'>
-								<BsPerson className='text-xl' />
+								<CgUser className='text-xl' />
 								About
+							</a>
+						</Link>
+					</li>{' '}
+					<li className={router.pathname === '/experience' ? active : inactive}>
+						<Link href='/experience'>
+							<a className='flex gap-2 navbar-link'>
+								<CgLaptop className='text-xl' />
+								Experience
 							</a>
 						</Link>
 					</li>
 					<li className={router.pathname === '/projects' ? active : inactive}>
 						<Link href='/projects'>
 							<a className='flex gap-2 navbar-link'>
-								<BsPuzzle className='text-xl' />
+								<CgTrello className='text-xl' />
 								Projects
 							</a>
 						</Link>
 					</li>
-					<li className={router.pathname === '/contact' ? active : inactive}>
-						<Link href='/contact'>
-							<a className='flex gap-2 navbar-link'>
-								<FaRegPaperPlane className='text-xl' />
-								Contact
-							</a>
-						</Link>
-					</li>
-
 					<li
 						className='navbar-toggle'
 						onClick={() => toggleDropdown((dropdown) => !dropdown)}
@@ -74,7 +73,6 @@ const Navbar = () => {
 							}
 						/>
 					</li>
-
 					<li className='shadow-lg shadow-blue-500/40 rounded-lg right-0'>
 						<IconButton
 							aria-label='dark mode button'
