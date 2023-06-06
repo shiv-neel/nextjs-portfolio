@@ -37,6 +37,7 @@ const About = () => {
 						href='https://rentar.com/efficient-engines-thermodynamics-combustion-efficiency/#:~:text=The%20reasons%20combustion%20engines%20are,(power)%20by%20burning%20fuel.'
 						className='underline text-gray-400'
 						target='_blank'
+						rel='noreferrer'
 					>
 						rather inefficient internal combustion process.
 					</a>

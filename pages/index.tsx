@@ -1,13 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import {
 	Button,
-	Icon,
 	Heading,
-	useColorMode,
 	Box,
-	Image,
 } from '@chakra-ui/react'
-import LandingSVG from '../components/LandingSVG'
 import { FaDownload } from 'react-icons/fa'
 import Link from 'next/link'
 import { BsDot, BsGithub, BsLinkedin, BsSpotify } from 'react-icons/bs'
