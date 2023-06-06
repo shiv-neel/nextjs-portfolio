@@ -24,11 +24,6 @@ const Navbar = () => {
 		setMounted(true)
 	}, [])
 
-	useEffect(() => {
-		if (window && typeof window === undefined) return
-		if (window.innerWidth < 768) toggleDropdown(true)
-	}, [window.innerWidth])
-
 	const offsets = [34, 102, 170, 238]
 	const pathnames = {
 		'/': 0,

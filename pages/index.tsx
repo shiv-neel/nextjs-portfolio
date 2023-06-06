@@ -44,13 +44,13 @@ export default function Home() {
 
 				<Box className=''>
 					<Box className='flex text-4xl space-x-10 mt-16 items-center'>
-						<Link href='https://github.com/shiv-neel'>
+						<Link href='https://github.com/shiv-neel' passHref>
 							<BsGithub className='hover:scale-110 hover:cursor-pointer duration-100 text-green-500' />
 						</Link>
-						<Link href='https://www.linkedin.com/in/shiva-neelakantan/'>
+						<Link href='https://www.linkedin.com/in/shiva-neelakantan/' passHref>
 							<BsLinkedin className='hover:scale-110 hover:cursor-pointer duration-100 text-blue-600' />
 						</Link>
-						<Link href='mailto:shiv.neel1622@gmail.com'>
+						<Link href='mailto:shiv.neel1622@gmail.com' passHref>
 							<SiGmail className='hover:scale-110 hover:cursor-pointer duration-100 text-red-500' />
 						</Link>
 					</Box>

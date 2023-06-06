@@ -24,10 +24,12 @@ const Experience: NextPage = () => {
 				Resume
 			</Heading>
 			<Box>
-				<Link href='https://www.overleaf.com/read/vzgkkknbkhqg'>
+				<Link href='https://www.overleaf.com/read/vzgkkknbkhqg' passHref>
 					<Button
 						className='flex gap-7 items-center w-60 h-20'
-						colorScheme='whiteAlpha'
+						variant='outline'
+						style={{ padding: '25px' }}
+						colorScheme={'messenger'}
 					>
 						<FaDownload className='bg-transparent text-white' />
 						<p className='text-white bg-transparent'>Download PDF</p>
