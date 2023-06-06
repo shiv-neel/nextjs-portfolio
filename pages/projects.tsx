@@ -6,7 +6,7 @@ import Skills from '../components/Skills'
 
 const Portfolio = () => {
 	return (
-		<Box className='mt-28 px-20 justify-center mx-auto max-w-5xl'>
+		<Box className='md:mt-28 mt-14 px-20 justify-center mx-auto max-w-5xl'>
 			<Heading
 				as='h1'
 				size='xl'

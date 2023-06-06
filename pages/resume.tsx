@@ -11,7 +11,7 @@ import { EXPERIENCE_DATA } from '../data/experience_data'
 const Experience: NextPage = () => {
 	const {colorMode, toggleColorMode} = useColorMode()
 	return (
-		<Box className='mt-28 px-20 justify-center mx-auto max-w-5xl'>
+		<Box className='md:mt-28 mt-14 px-20 justify-center mx-auto max-w-5xl'>
 			<Head>
 				<title>Resume</title>
 				<link rel='icon' href='/favicon.ico' />
@@ -55,8 +55,7 @@ const Experience: NextPage = () => {
 								<p className='text-gray-400'>Aug 2019 - Dec 2023</p>
 								<p className='text-gray-400'>Ames, IA</p>
 							</p>
-							<p className='leading-relaxed '>
-								<>
+							<p className='leading-relaxed'>
 									{' '}
 									<li>
 										<strong>GPA:</strong> 3.72/4.00
@@ -71,7 +70,6 @@ const Experience: NextPage = () => {
 									<li>
 										<strong>Honors:</strong> Summa Cum Laude, Dean&apos;s List
 									</li>
-								</>
 							</p>
 						</Box>
 					</Box>

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { BsSun } from 'react-icons/bs'
-import { HiOutlineViewList } from 'react-icons/hi'
 import { Box, IconButton, useColorMode } from '@chakra-ui/react'
-import { CgFileDocument, CgHome, CgLaptop, CgMoon, CgSun, CgTrello, CgUser } from 'react-icons/cg'
+import { CgFileDocument, CgHome, CgLaptop, CgMenu, CgMoon, CgSun, CgTrello, CgUser } from 'react-icons/cg'
 import { MdOutlineDarkMode } from 'react-icons/md'
 import Logo from './Logo'
 import { useRouter } from 'next/router'
@@ -50,7 +48,7 @@ const Navbar = () => {
 					</motion.div>
 					<li className={router.pathname === '/' ? active : inactive}>
 						<Link href='/'>
-							<a className='flex items-center  gap-2 navbar-link z-500'>
+							<a className='flex items-center  gap-2 navbar-link'>
 								<CgHome className='text-xl' />
 							</a>
 						</Link>
@@ -77,17 +75,18 @@ const Navbar = () => {
 						</Link>
 					</li>
 					<li
-						className='navbar-toggle'
+						className='navbar-toggle shadow-lg rounded-lg'
 						onClick={() => toggleDropdown((dropdown) => !dropdown)}
 					>
 						<IconButton
+						colorScheme={'messenger'}
 							aria-label='menu dropdown'
 							icon={
-								<HiOutlineViewList className='text-2xl text-blue-500 cursor-pointer' />
+								<CgMenu className='text-2xl cursor-pointer' />
 							}
 						/>
 					</li>
-					<li className='shadow-lg shadow-blue-500/40 rounded-lg right-0'>
+					<li className='shadow-lg rounded-lg right-0'>
 						<IconButton
 						className='hover:rotate-180'
 						colorScheme={'messenger'}

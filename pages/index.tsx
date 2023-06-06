@@ -20,8 +20,8 @@ export default function Home() {
 	}, [hour])
 
 	return (
-		<Box className='px-20 mx-auto max-w-5xl'>
-			<Box className='flex justify-between my-10'>
+		<Box className='md:mt-28 mt-14 px-20 mx-auto max-w-5xl'>
+			<Box className='flex my-10 items-center justify-between'>
 				<Box className='pt-20 pb-10'>
 					<Heading as='h3' size='lg'>
 						Good {timeOfDay}, I&apos;m

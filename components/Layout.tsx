@@ -9,7 +9,7 @@ const Layout: React.FC = ({ children }) => {
 	return (
 		<Box
 			className='w-full min-h-screen min-w-fit'
-			backgroundColor={colorMode === 'dark' ? '#111' : '#EEE'}
+			backgroundColor={colorMode === 'dark' ? '#111112' : '#EEEEEF'}
 		>
 			<Box className='flex flex-col mx-auto'>
 				<Navbar />
