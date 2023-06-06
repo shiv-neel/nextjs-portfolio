@@ -1,4 +1,4 @@
-interface ProjectCardType {
+export interface ProjectCardType {
 	title: string
 	description: string
 	dates: string

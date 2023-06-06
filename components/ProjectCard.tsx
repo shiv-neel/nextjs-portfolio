@@ -3,7 +3,7 @@ import Link from 'next/link'
 import React from 'react'
 import { BsFillEyeFill, BsGithub } from 'react-icons/bs'
 
-import { ProjectCardType } from './Projects'
+import { ProjectCardType } from '../data/project_data'
 
 const ProjectCard: React.FC<ProjectCardType> = ({
 	title,
