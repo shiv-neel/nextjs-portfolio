@@ -1,31 +1,10 @@
-import anime from 'animejs'
 import React, { useState, useEffect } from 'react'
-import Anime from 'react-animejs-wrapper'
 import '@fontsource/inconsolata'
 import { IoMdPlanet } from 'react-icons/io'
 const Logo = () => {
 	return (
 		<>
-			<Anime
-				config={{
-					translateX: [150, 0],
-					rotate: 720,
-					loop: false,
-					duration: 2000,
-				}}
-			>
 				<IoMdPlanet className='text-3xl mr-2' color='#006AFF' />
-			</Anime>
-			<Anime
-				config={{
-					translateY: [-60, 0],
-					duration: 500,
-					scale: [0, 1],
-					loop: false,
-					delay: anime.stagger(100, { start: 1000 }),
-				}}
-				className='flex flex-row'
-			>
 				<div className='text-2xl' style={{ fontFamily: 'Inconsolata' }}>
 					s
 				</div>
@@ -50,20 +29,9 @@ const Logo = () => {
 				<div className='text-2xl' style={{ fontFamily: 'Inconsolata' }}>
 					l
 				</div>
-			</Anime>
-			<Anime
-				config={{
-					duration: 850,
-					opacity: [1, 0],
-					loop: true,
-					easing: 'easeInOutExpo',
-					delay: 1000,
-				}}
-			>
 				<div className='text-2xl' style={{ fontFamily: 'Inconsolata' }}>
 					_
 				</div>
-			</Anime>
 		</>
 	)
 }
