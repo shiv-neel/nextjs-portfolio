@@ -20,8 +20,8 @@ export default function Home() {
 	}, [hour])
 
 	return (
-		<Box className='md:mt-28 mt-14 px-20 mx-auto max-w-5xl'>
-			<Box className='flex my-10 items-center justify-between'>
+		<Box className='md:mt-12 mt-14 px-20 mx-auto max-w-5xl'>
+			<Box className='flex items-center justify-between'>
 				<Box className='pt-20 pb-10'>
 					<Heading as='h3' size='lg'>
 						Good {timeOfDay}, I&apos;m
@@ -33,7 +33,7 @@ export default function Home() {
 				<RoadTripSVG />
 			</Box>
 			<Box className=''>
-				<p className='mt-20 leading-relaxed text-lg'>
+				<p className='mt-12 leading-relaxed text-lg'>
 					<strong>
 						Through actively learning how to appreciate the technology around
 						me, I&apos;ve come to better understand myself.{' '}

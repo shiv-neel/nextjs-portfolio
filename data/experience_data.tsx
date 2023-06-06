@@ -52,7 +52,7 @@ export const EXPERIENCE_DATA = [
 				</li>
 			</p>
 		),
-		dates: 'January 2022 - June 2022',
+		dates: 'Jan 2022 - Jun 2022',
 		stack: ['React', 'Typescript', 'Python', 'PostgreSQL', 'Firebase'],
 	},
 ]

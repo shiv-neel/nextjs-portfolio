@@ -88,7 +88,6 @@ const Navbar = () => {
 					</li>
 					<li className='shadow-lg rounded-lg right-0'>
 						<IconButton
-						className='hover:rotate-180'
 						colorScheme={'messenger'}
 							aria-label='dark mode button'
 							style={{ fontSize: 20 }}
