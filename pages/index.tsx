@@ -20,7 +20,7 @@ export default function Home() {
 	}, [hour])
 
 	return (
-		<Box className='px-20 mx-auto'>
+		<Box className='px-20 mx-auto max-w-5xl'>
 			<Box className='flex justify-between my-10'>
 				<Box className='pt-20 pb-10'>
 					<Heading as='h3' size='lg'>
@@ -58,11 +58,11 @@ export default function Home() {
 				<Box className='flex space-x-10 mt-20'>
 					<Link href='/projects' passHref>
 						<Button colorScheme={'messenger'} style={{ padding: '25px' }}>
-							Learn More
+							View Projects
 						</Button>
 					</Link>
 					<Link
-						href='https://docs.google.com/document/d/1xPuskriTfGFY_mPQrF3gYMGnmM1nGCeSxP9TD1RFCvc/edit?usp=sharing'
+						href='https://www.overleaf.com/read/vzgkkknbkhqg'
 						passHref
 					>
 						<a target='_blank'>

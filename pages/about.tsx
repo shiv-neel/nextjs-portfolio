@@ -13,7 +13,7 @@ const About = () => {
 			</Head>
 			<Box>
 				<p className='text-4xl font-bold mb-6'>About Me</p>
-				<p className='mt-2 leading-relaxed text-sm'>
+				<p className='mt-2 leading-relaxed'>
 					Hey there, I&apos;m Shiv. I&apos;m currently in my final semester of
 					my computer science bachelor&apos;s degree at Iowa State University. I
 					currently intern at Workiva, Inc. as a Software Engineer, and have a

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { BsSun, BsHouse, BsPerson, BsPuzzle } from 'react-icons/bs'
+import { BsSun } from 'react-icons/bs'
 import { HiOutlineViewList } from 'react-icons/hi'
 import { Box, IconButton, useColorMode } from '@chakra-ui/react'
-import { CgHome, CgLaptop, CgTrello, CgUser } from 'react-icons/cg'
+import { CgFileDocument, CgHome, CgLaptop, CgMoon, CgSun, CgTrello, CgUser } from 'react-icons/cg'
 import { MdOutlineDarkMode } from 'react-icons/md'
 import Logo from './Logo'
 import { useRouter } from 'next/router'
@@ -14,7 +14,7 @@ const Navbar = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
 	const router = useRouter()
 	const inactive =
-		'transition duration-200 hover:scale-110 hover:text-blue-500 hover:font-bold z-50'
+		'transition duration-200 hover:scale-150 hover:text-blue-500 hover:font-bold z-50'
 	const active = 'text-blue-500 font-bold z-50'
 
 	const [showDropdown, toggleDropdown] = useState<boolean>(false)
@@ -45,7 +45,7 @@ const Navbar = () => {
 					>
 						<Box
 							className='w-12 h-12 p-2 rounded-md cursor-pointer absolute z-1 -bottom-6 shadow-xl'
-							bgColor='#000000'
+							bgColor={colorMode === 'light' ? 'white' : 'black'}
 						></Box>
 					</motion.div>
 					<li className={router.pathname === '/' ? active : inactive}>
@@ -65,7 +65,7 @@ const Navbar = () => {
 					<li className={router.pathname === '/resume' ? active : inactive}>
 						<Link href='/resume'>
 							<a className='flex items-center gap-2 navbar-link'>
-								<CgLaptop className='text-xl' />
+								<CgFileDocument className='text-xl' />
 							</a>
 						</Link>
 					</li>
@@ -89,10 +89,12 @@ const Navbar = () => {
 					</li>
 					<li className='shadow-lg shadow-blue-500/40 rounded-lg right-0'>
 						<IconButton
+						className='hover:rotate-180'
+						colorScheme={'messenger'}
 							aria-label='dark mode button'
 							style={{ fontSize: 20 }}
 							onClick={toggleColorMode}
-							icon={colorMode === 'dark' ? <MdOutlineDarkMode /> : <BsSun />}
+							icon={colorMode === 'dark' ? <CgMoon /> : <CgSun />}
 						/>
 					</li>
 				</ul>

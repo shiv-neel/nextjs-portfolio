@@ -1,10 +1,10 @@
-export const experienceData = [
+export const EXPERIENCE_DATA = [
 	{
 		title: 'Workiva',
 		subtitle: 'Software Engineer (Intern)',
 		location: 'Chicago, IL (Remote)',
 		description: (
-			<p className='text-sm leading-relaxed text-gray-300'>
+			<p className='leading-relaxed'>
 				<li>
 					<strong>Database Query Reduction:</strong> Reduced server-side load by
 					80% for five internal micro-service requests by aggregating expensive
@@ -32,7 +32,7 @@ export const experienceData = [
 		subtitle: 'Data Scientist (Intern)',
 		location: 'Ames, IA',
 		description: (
-			<p className='text-sm leading-relaxed text-gray-300'>
+			<p className='leading-relaxed'>
 				<li>
 					<strong>Data Pipeline Automation:</strong> Engineered three data
 					pipelines to acquire and process serialized data from Twitter,

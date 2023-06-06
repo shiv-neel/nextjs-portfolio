@@ -1,4 +1,4 @@
-import { Box, Button, Divider, Heading } from '@chakra-ui/react'
+import { Box, Button, Divider, Heading, useColorMode } from '@chakra-ui/react'
 import { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -6,11 +6,12 @@ import React from 'react'
 import { CgLaptop } from 'react-icons/cg'
 import { FaDownload } from 'react-icons/fa'
 import ExperienceCard from '../components/ExperienceCard'
-import { experienceData } from '../experience_data'
+import { EXPERIENCE_DATA } from '../data/experience_data'
 
 const Experience: NextPage = () => {
+	const {colorMode, toggleColorMode} = useColorMode()
 	return (
-		<Box className='mt-28 px-20 justify-center mx-auto'>
+		<Box className='mt-28 px-20 justify-center mx-auto max-w-5xl'>
 			<Head>
 				<title>Resume</title>
 				<link rel='icon' href='/favicon.ico' />
@@ -25,15 +26,16 @@ const Experience: NextPage = () => {
 			</Heading>
 			<Box>
 				<Link href='https://www.overleaf.com/read/vzgkkknbkhqg' passHref>
+					<a target='_blank'>
 					<Button
 						className='flex gap-7 items-center w-60 h-20'
-						variant='outline'
 						style={{ padding: '25px' }}
-						colorScheme={'messenger'}
+						colorScheme='messenger'
+						textColor={colorMode === 'dark' ? 'black' : 'white'}
 					>
-						<FaDownload className='bg-transparent text-white' />
-						<p className='text-white bg-transparent'>Download PDF</p>
-					</Button>
+						<FaDownload className='bg-transparent' />
+						<p className='bg-transparent'>Download PDF</p>
+					</Button></a>
 				</Link>
 				<Box>
 					<Box className='mt-10'>
@@ -53,7 +55,7 @@ const Experience: NextPage = () => {
 								<p className='text-gray-400'>Aug 2019 - Dec 2023</p>
 								<p className='text-gray-400'>Ames, IA</p>
 							</p>
-							<p className='text-sm leading-relaxed text-gray-300'>
+							<p className='leading-relaxed '>
 								<>
 									{' '}
 									<li>
@@ -77,7 +79,7 @@ const Experience: NextPage = () => {
 						<p className='text-3xl mt-10 font-bold'>Experience</p>
 						<Divider className='my-5' />
 						<Box>
-							{experienceData.map((xp, index) => (
+							{EXPERIENCE_DATA.map((xp, index) => (
 								<ExperienceCard key={index} {...xp} />
 							))}
 						</Box>
