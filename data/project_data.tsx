@@ -1,6 +1,6 @@
 export interface ProjectCardType {
 	title: string
-	description: string
+	description: JSX.Element | string
 	dates: string
 	stack: string[]
 	github?: string
@@ -10,7 +10,7 @@ export const PROJECT_DATA: ProjectCardType[] = [
     {
         title: 'OpenLink',
         description:
-            'Interactive platform that leverages <strong>deep learning algorithms</strong> to pair software engineers with opportunities to contribute to meaningful <strong>open-source software</strong> (OSS) projects on Github.',
+            <p>Interactive platform that leverages <strong>deep learning algorithms</strong> to pair software engineers with opportunities to contribute to meaningful <strong>open-source software</strong> (OSS) projects on Github.'</p>,
         dates: 'May 2023 - Present',
         stack: ['React', 'Typescript', 'Next.js', 'MongoDB', 'Go', 'AWS']
     },
