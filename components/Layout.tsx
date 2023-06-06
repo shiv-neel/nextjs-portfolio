@@ -6,12 +6,16 @@ import Navbar from './Navbar'
 
 const Layout: React.FC = ({ children }) => {
 	const { colorMode } = useColorMode()
-	const bgc = colorMode === 'dark' ? 'bg-slate-900' : 'bg-slate-50'
 	return (
-		<Box className={`min-h-screen flex flex-col px-96 ${bgc}`}>
-			<Navbar />
-			<Box className='flex flex-1'>{children}</Box>
-			{/* <Footer /> */}
+		<Box
+			className='w-full min-h-screen min-w-fit'
+			backgroundColor={colorMode === 'dark' ? '#111' : '#EEE'}
+		>
+			<Box className='flex flex-col mx-auto'>
+				<Navbar />
+				<Box className='flex flex-1'>{children}</Box>
+				{/* <Footer /> */}
+			</Box>
 		</Box>
 	)
 }

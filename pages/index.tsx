@@ -12,6 +12,7 @@ import { FaDownload } from 'react-icons/fa'
 import Link from 'next/link'
 import { BsDot, BsGithub, BsLinkedin, BsSpotify } from 'react-icons/bs'
 import { SiGmail } from 'react-icons/si'
+import RoadTripSVG from '../components/RoadTripSVG'
 
 export default function Home() {
 	const [timeOfDay, setTimeOfDay] = useState('')
@@ -23,7 +24,7 @@ export default function Home() {
 	}, [hour])
 
 	return (
-		<Box className='px-20'>
+		<Box className='px-20 mx-auto'>
 			<Box className='flex justify-between my-10'>
 				<Box className='pt-20 pb-10'>
 					<Heading as='h3' size='lg'>
@@ -33,11 +34,7 @@ export default function Home() {
 						Shiva Neelakantan.
 					</Heading>
 				</Box>
-				<Image
-					src='https://sdk.bitmoji.com/render/panel/20048676-217431683_76-s5-v1.png?transparent=1&palette=1&scale=1'
-					w={200}
-					className='rounded-full shadow-md'
-				/>
+				<RoadTripSVG />
 			</Box>
 			<Box className=''>
 				<p className='mt-20 leading-relaxed text-lg'>
@@ -48,27 +45,19 @@ export default function Home() {
 					I&apos;m a Full-stack Software Engineer based in Chicagoland, aspiring
 					to execute ideas that advance my community and those I love.
 				</p>
-				<Box className='flex text-4xl space-x-10 mt-16 items-center'>
-					<Link href='https://github.com/shiv-neel'>
-						<a target={'_blank'}>
-							<BsGithub className='hover:scale-110 hover:cursor-pointer duration-100' />
-						</a>
-					</Link>
-					<Link href='https://www.linkedin.com/in/shiva-neelakantan/'>
-						<a target={'_blank'}>
+
+				<Box className=''>
+					<Box className='flex text-4xl space-x-10 mt-16 items-center'>
+						<Link href='https://github.com/shiv-neel'>
+							<BsGithub className='hover:scale-110 hover:cursor-pointer duration-100 text-green-500' />
+						</Link>
+						<Link href='https://www.linkedin.com/in/shiva-neelakantan/'>
 							<BsLinkedin className='hover:scale-110 hover:cursor-pointer duration-100 text-blue-600' />
-						</a>
-					</Link>
-					<Link href='mailto:shiv.neel1622@gmail.com'>
-						<a target={'_blank'}>
+						</Link>
+						<Link href='mailto:shiv.neel1622@gmail.com'>
 							<SiGmail className='hover:scale-110 hover:cursor-pointer duration-100 text-red-500' />
-						</a>
-					</Link>
-					<Link href='https://open.spotify.com/user/o05eru4383ix2rhufv8kgxsah?si=4891daaad8a54f2c'>
-						<a target={'_blank'}>
-							<BsSpotify className='hover:scale-110 hover:cursor-pointer duration-100 bg-black rounded-full text-green-500' />
-						</a>
-					</Link>
+						</Link>
+					</Box>
 				</Box>
 				<Box className='flex space-x-10 mt-20'>
 					<Link href='/projects' passHref>
@@ -92,9 +81,6 @@ export default function Home() {
 						</a>
 					</Link>
 				</Box>
-			</Box>
-			<Box className='flex justify-center scale-95 mt-48'>
-				<LandingSVG />
 			</Box>
 		</Box>
 	)

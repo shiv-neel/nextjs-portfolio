@@ -37,7 +37,6 @@ const Projects = () => {
 			dates: 'May 2022 - Aug 2022',
 			stack: ['Typescript', 'React', 'Redux', 'Supabase', 'PostgreSQL'],
 			github: 'https://github.com/shiv-neel/exercise-planner',
-			demo: 'https://exercise-planner-blue.vercel.app/',
 		},
 		{
 			title: 'Playlist Tidier',

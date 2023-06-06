@@ -7,7 +7,7 @@ const configTheme = extendTheme({
 		body: 'Inter, sans-serif',
 	},
 	colors: {
-		bg: {},
+		bg: { 'dark': 'black' },
 	},
 })
 

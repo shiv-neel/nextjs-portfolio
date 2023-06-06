@@ -2,19 +2,20 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { BsSun, BsHouse, BsPerson, BsPuzzle } from 'react-icons/bs'
 import { HiOutlineViewList } from 'react-icons/hi'
-import { IconButton, useColorMode } from '@chakra-ui/react'
+import { Box, IconButton, useColorMode } from '@chakra-ui/react'
 import { CgHome, CgLaptop, CgTrello, CgUser } from 'react-icons/cg'
 import { MdOutlineDarkMode } from 'react-icons/md'
 import Logo from './Logo'
 import { useRouter } from 'next/router'
 import Dropdown from './Dropdown'
+import { motion } from 'framer-motion'
 
 const Navbar = () => {
 	const { colorMode, toggleColorMode } = useColorMode()
 	const router = useRouter()
 	const inactive =
-		'transition duration-200 hover:scale-110 hover:text-blue-500 hover:font-bold'
-	const active = 'text-blue-500 font-bold'
+		'transition duration-200 hover:scale-110 hover:text-blue-500 hover:font-bold z-50'
+	const active = 'text-blue-500 font-bold z-50'
 
 	const [showDropdown, toggleDropdown] = useState<boolean>(false)
 	const [mounted, setMounted] = useState<boolean>(false)
@@ -23,6 +24,19 @@ const Navbar = () => {
 		setMounted(true)
 	}, [])
 
+	useEffect(() => {
+		if (typeof window === undefined) return
+		if (window.innerWidth < 768) toggleDropdown(true)
+	}, [window.innerWidth])
+
+	const offsets = [34, 102, 170, 238]
+	const pathnames = {
+		'/': 0,
+		'/about': 1,
+		'/resume': 2,
+		'/projects': 3,
+	}
+
 	return (
 		mounted && (
 			<nav className='w-full'>
@@ -30,35 +44,40 @@ const Navbar = () => {
 					<li className='flex mr-auto'>
 						<Logo />
 					</li>
+					<motion.div
+						animate={{ x: offsets[pathnames[router.pathname]] }}
+						className='invisible md:visible'
+					>
+						<Box
+							className='w-12 h-12 p-2 rounded-md cursor-pointer absolute z-1 -bottom-6 shadow-xl'
+							bgColor='#000000'
+						></Box>
+					</motion.div>
 					<li className={router.pathname === '/' ? active : inactive}>
 						<Link href='/'>
-							<a className='flex gap-2 navbar-link'>
+							<a className='flex items-center  gap-2 navbar-link z-500'>
 								<CgHome className='text-xl' />
-								Home
 							</a>
 						</Link>
 					</li>
 					<li className={router.pathname === '/about' ? active : inactive}>
 						<Link href='/about'>
-							<a className='flex gap-2 navbar-link'>
+							<a className='flex items-center  gap-2 navbar-link'>
 								<CgUser className='text-xl' />
-								About
 							</a>
 						</Link>
 					</li>{' '}
-					<li className={router.pathname === '/experience' ? active : inactive}>
-						<Link href='/experience'>
-							<a className='flex gap-2 navbar-link'>
+					<li className={router.pathname === '/resume' ? active : inactive}>
+						<Link href='/resume'>
+							<a className='flex items-center gap-2 navbar-link'>
 								<CgLaptop className='text-xl' />
-								Experience
 							</a>
 						</Link>
 					</li>
 					<li className={router.pathname === '/projects' ? active : inactive}>
 						<Link href='/projects'>
-							<a className='flex gap-2 navbar-link'>
+							<a className='flex items-center  gap-2 navbar-link'>
 								<CgTrello className='text-xl' />
-								Projects
 							</a>
 						</Link>
 					</li>
