@@ -25,7 +25,7 @@ const Navbar = () => {
 	}, [])
 
 	useEffect(() => {
-		if (typeof window === undefined) return
+		if (window && typeof window === undefined) return
 		if (window.innerWidth < 768) toggleDropdown(true)
 	}, [window.innerWidth])
 
