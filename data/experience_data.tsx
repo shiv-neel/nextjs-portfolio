@@ -6,9 +6,7 @@ export const EXPERIENCE_DATA = [
 		description: (
 			<p className='leading-relaxed'>
 				<li>
-					<strong>Database Query Reduction:</strong> Reduced server-side load by
-					80% for five internal micro-service requests by aggregating expensive
-					API calls and caching successful responses in client-side memory
+					<strong>Database Query Reduction:</strong> Reduced backend query execution times by an average of 52% for three internal microservice RPC requests via migrating calls behind proxies and caching successful client-side responses
 				</li>
 				<li>
 					<strong>Product Modernization:</strong> Improved customer satisfaction
@@ -34,16 +32,15 @@ export const EXPERIENCE_DATA = [
 		description: (
 			<p className='leading-relaxed'>
 				<li>
+					<strong>Machine Learning Algorithms:</strong> Empowered a social media analytics platform with TensorFlow-powered machine learning models to unlock unprecedented value through actionable insights for highly successful influencers
+				</li>
+				<li>
 					<strong>Data Pipeline Automation:</strong> Engineered three data
 					pipelines to acquire and process serialized data from Twitter,
 					YouTube, and Instagram APIs for constructing a training data set for
 					supervised machine learning models
 				</li>
-				<li>
-					<strong>Database Architecture:</strong> Designed eight No-SQL database
-					schemas in MongoDB with an emphasis on horizontal scalability and
-					query performance to efficiently store and organize data models
-				</li>
+
 				<li>
 					<strong>API Documentation:</strong> Reduced ramp-up of new engineers
 					down to less than one month by singlehandedly authoring detailed code

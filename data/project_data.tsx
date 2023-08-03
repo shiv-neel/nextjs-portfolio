@@ -1,51 +1,45 @@
 export interface ProjectCardType {
-	title: string
-	description: JSX.Element | string
-	dates: string
-	stack: string[]
-	github?: string
-	demo?: string
+    title: string
+    description: JSX.Element | string
+    dates: string
+    stack: ChipType[]
+    github?: string
+    demo?: string
+    hasDivider?: boolean
+}
+
+export interface ChipType {
+    label: string
+    color: string
 }
 export const PROJECT_DATA: ProjectCardType[] = [
+    // {
+    //     title: 'OpenLink',
+    //     description:
+    //         <p>Interactive platform that leverages <strong>deep learning algorithms</strong> to pair software engineers with opportunities to contribute to meaningful <strong>open-source software</strong> (OSS) projects on Github.'</p>,
+    //     dates: 'May 2023 - Present',
+    //     stack: ['React', 'Typescript', 'Next.js', 'MongoDB', 'Go', 'AWS']
+    // },
     {
-        title: 'OpenLink',
+        title: 'Pathfinding Visualizer',
         description:
-            <p>Interactive platform that leverages <strong>deep learning algorithms</strong> to pair software engineers with opportunities to contribute to meaningful <strong>open-source software</strong> (OSS) projects on Github.'</p>,
+            <p>Feature-rich React web application with a 2D grid, enabling users to interactively visualize and analyze graph algorithms,
+                including Dijkstra's, BFS, DFS, and A* algorithms, by selecting source and destination vertices, placing walls, and bombs.</p>,
         dates: 'May 2023 - Present',
-        stack: ['React', 'Typescript', 'Next.js', 'MongoDB', 'Go', 'AWS']
+        stack: [{ label: 'React', color: 'blue' }, { label: 'Typescript', color: 'blue' }, { label: 'TailwindCSS', color: 'cyan' }],
+        github: 'https://github.com/shiv-neel/pathfinder-v2',
+        demo: 'https://pathviz.vercel.app',
+        hasDivider: true
     },
     {
-        title: 'ATOMIC',
+        title: 'SoundTrack',
         description:
-            'A unique self-improvement system intended to improve one’s self-discipline and habit formation techniques. Applied domain knowledge from two psychology books on motivation theory into application’s architecture.',
-        dates: 'May 2022 - Dec 2022',
-        stack: ['React', 'Typescript', 'Redux', 'PostgreSQL', 'Supabase'],
-        github: 'https://github.com/shiv-neel/atomic',
-        demo: 'https://atomic-nine.vercel.app',
+            <p>SoundTrack is a mobile social media application on which you can share automated analytics posts about your favorite songs, albums, and artists, and connect with your fellow music lovers.<br /><br />
+                The app uses OAuth 2.0 to fetch and aggregate user-specific analytics from Spotify's Web API. The frontend is written in Android Studio, and the backend uses Java Springboot with Spring Security. All analytic posts are generated using a custom Javascript-based image generator microservice.</p>,
+        dates: 'Jan 2023 - Apr 2023',
+        stack: [{ label: 'Android Studio', color: 'green' }, { label: 'Springboot', color: 'whatsapp' }, { label: 'MySQL', color: 'orange' }],
+        github: 'https://github.com/shiv-neel/soundtrack',
+        hasDivider: false
     },
-    {
-        title: 'Chess Engine',
-        description:
-            'A chess AI that implements a minimax algorithm to compute the best move in a chess position by searching up to five moves ahead.',
-        dates: 'Jun 2022 - Aug 2022',
-        stack: ['Python', 'Jupyter Notebook'],
-        github: 'https://github.com/shiv-neel/chess-online',
-    },
-    {
-        title: 'LiftLog',
-        description:
-            'A web app that helps you plan and log your exercises over time.',
-        dates: 'May 2022 - Aug 2022',
-        stack: ['Typescript', 'React', 'Redux', 'Supabase', 'PostgreSQL'],
-        github: 'https://github.com/shiv-neel/exercise-planner',
-    },
-    {
-        title: 'Playlist Tidier',
-        description:
-            'A web app that helps you clean and convert your Spotify playlists.',
-        dates: 'Mar 2022 - Apr 2022',
-        stack: ['Javascript', 'React', 'Node'],
-        github: 'https://github.com/shiv-neel/playlist-tidier',
-        demo: 'https://62098a5630f04fcd32739a48--spotify-playlist-tidier.netlify.app/',
-    },
+
 ]

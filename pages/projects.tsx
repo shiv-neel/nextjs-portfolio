@@ -18,13 +18,6 @@ const Portfolio = () => {
 			<Box>
 				<Projects />
 			</Box>
-			<Heading as='h1' size='xl' className='flex mx-auto mb-12'>
-				Tech Stack
-			</Heading>
-			<Box className='flex justify-center'>
-				<Skills />
-			</Box>
-			<Divider className='my-12' />
 		</Box>
 	)
 }

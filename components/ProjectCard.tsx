@@ -1,9 +1,9 @@
-import { Badge, Box, Button, Divider, Heading } from "@chakra-ui/react";
-import Link from "next/link";
-import React from "react";
-import { BsFillEyeFill, BsGithub } from "react-icons/bs";
+import { Badge, Box, Button, Divider, Heading } from "@chakra-ui/react"
+import Link from "next/link"
+import React from "react"
+import { BsFillEyeFill, BsGithub } from "react-icons/bs"
 
-import { ProjectCardType } from "../data/project_data";
+import { ProjectCardType } from "../data/project_data"
 
 const ProjectCard: React.FC<ProjectCardType> = ({
   title,
@@ -12,25 +12,8 @@ const ProjectCard: React.FC<ProjectCardType> = ({
   stack,
   github,
   demo,
+  hasDivider
 }) => {
-  const BadgeColors = {
-    React: "cyan",
-    Node: "green",
-    Redux: "purple",
-    Graphql: "pink",
-    PostgreSQL: "blue",
-    Firebase: "orange",
-    Python: "yellow",
-    Typescript: "blue",
-    Supabase: "green",
-    Javascript: "yellow",
-    Tensorflow: "red",
-    "Jupyter Notebook": "orange",
-    Go: "blue",
-    "Next.js": "red",
-    AWS: "orange",
-    MongoDB: "green",
-  };
 
   return (
     <Box>
@@ -39,13 +22,13 @@ const ProjectCard: React.FC<ProjectCardType> = ({
         <Box className="flex gap-3 my-5 ml-auto flex-wrap justify-end">
           {stack.map((s, index) => (
             <Badge
-              colorScheme={BadgeColors[s]}
+              colorScheme={s.color}
               key={index}
               px={2}
               py={1}
               rounded="full"
             >
-              {s}
+              {s.label}
             </Badge>
           ))}
         </Box>
@@ -53,21 +36,8 @@ const ProjectCard: React.FC<ProjectCardType> = ({
       <p className="text-gray-400 mb-3">{dates}</p>
       <p className="text-md">{description}</p>
       <Box className="flex mt-5 gap-5">
-        {github && (
-          <Button colorScheme={"messenger"}>
-            <a
-              target="_blank"
-              rel="noreferrer"
-              href={github}
-              className="flex gap-3 items-center"
-            >
-              <BsGithub />
-              View Repository
-            </a>
-          </Button>
-        )}
         {demo && (
-          <Button variant="outline" colorScheme={"messenger"}>
+          <Button variant="solid" colorScheme={"messenger"}>
             <a
               target="_blank"
               rel="noreferrer"
@@ -79,18 +49,21 @@ const ProjectCard: React.FC<ProjectCardType> = ({
             </a>
           </Button>
         )}
-		{!github && !demo && (<Box className="flex mt-5 gap-5 items-center">
-			<Button colorScheme={"messenger"} disabled>
+        {github && (
+          <Button colorScheme={"messenger"} variant='outline'>
             <a
               target="_blank"
               rel="noreferrer"
+              href={github}
               className="flex gap-3 items-center"
             >
               <BsGithub />
               View Repository
             </a>
           </Button>
-		  <Button variant='outline' colorScheme={"messenger"} disabled>
+        )}
+        {!github && !demo && (<Box className="flex mt-5 gap-5 items-center">
+          <Button variant='solid' colorScheme={"messenger"} disabled>
             <a
               target="_blank"
               rel="noreferrer"
@@ -100,12 +73,22 @@ const ProjectCard: React.FC<ProjectCardType> = ({
               Live Demo
             </a>
           </Button>
-		  <p className="font-bold text-blue-500">Work in progress... stay tuned!</p>
-		</Box>)}
+          <Button colorScheme={"messenger"} disabled variant='outline'>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              className="flex gap-3 items-center"
+            >
+              <BsGithub />
+              View Repository
+            </a>
+          </Button>
+          <p className="font-bold text-blue-500">Work in progress... stay tuned!</p>
+        </Box>)}
       </Box>
-      <Divider my={8} />
+      {hasDivider && <Divider my={8} />}
     </Box>
-  );
-};
+  )
+}
 
-export default ProjectCard;
+export default ProjectCard

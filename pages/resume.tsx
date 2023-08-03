@@ -3,13 +3,13 @@ import { NextPage } from 'next'
 import Head from 'next/head'
 import Link from 'next/link'
 import React from 'react'
-import { CgLaptop } from 'react-icons/cg'
+import { CgFileDocument } from 'react-icons/cg'
 import { FaDownload } from 'react-icons/fa'
 import ExperienceCard from '../components/ExperienceCard'
 import { EXPERIENCE_DATA } from '../data/experience_data'
 
 const Experience: NextPage = () => {
-	const {colorMode, toggleColorMode} = useColorMode()
+	const { colorMode, toggleColorMode } = useColorMode()
 	return (
 		<Box className='md:mt-28 mt-14 px-20 justify-center mx-auto max-w-5xl'>
 			<Head>
@@ -21,21 +21,21 @@ const Experience: NextPage = () => {
 				size='xl'
 				className='flex mx-auto mb-6 items-center gap-3'
 			>
-				<CgLaptop />
+				<CgFileDocument />
 				Resume
 			</Heading>
 			<Box>
 				<Link href='https://www.overleaf.com/read/vzgkkknbkhqg' passHref>
 					<a target='_blank'>
-					<Button
-						className='flex gap-7 items-center w-60 h-20'
-						style={{ padding: '25px' }}
-						colorScheme='messenger'
-						textColor={colorMode === 'dark' ? 'black' : 'white'}
-					>
-						<FaDownload className='bg-transparent' />
-						<p className='bg-transparent'>Download PDF</p>
-					</Button></a>
+						<Button
+							className='flex gap-7 items-center w-60 h-20'
+							style={{ padding: '25px' }}
+							colorScheme='messenger'
+							textColor={colorMode === 'dark' ? 'black' : 'white'}
+						>
+							<FaDownload className='bg-transparent' />
+							<p className='bg-transparent'>Download PDF</p>
+						</Button></a>
 				</Link>
 				<Box>
 					<Box className='mt-10'>
@@ -56,20 +56,20 @@ const Experience: NextPage = () => {
 								<p className='text-gray-400'>Ames, IA</p>
 							</p>
 							<p className='leading-relaxed'>
-									{' '}
-									<li>
-										<strong>GPA:</strong> 3.72/4.00
-									</li>
-									<li>
-										<strong>Minors:</strong> Data Science
-									</li>
-									<li>
-										<strong>Certifications:</strong> AWS Certified Cloud
-										Practitioner
-									</li>
-									<li>
-										<strong>Honors:</strong> Summa Cum Laude, Dean&apos;s List
-									</li>
+								{' '}
+								<li>
+									<strong>GPA:</strong> 3.72/4.00
+								</li>
+								<li>
+									<strong>Minors:</strong> Data Science
+								</li>
+								<li>
+									<strong>Certifications:</strong> AWS Certified Cloud
+									Practitioner (WIP)
+								</li>
+								<li>
+									<strong>Honors:</strong> Summa Cum Laude, Dean&apos;s List
+								</li>
 							</p>
 						</Box>
 					</Box>
