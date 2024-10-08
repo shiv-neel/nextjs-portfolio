@@ -24,7 +24,7 @@ const About = () => {
 				<p className='mt-2 leading-relaxed'>
 					👋🏾 Hey there, I&apos;m Shiva!
 					<br /><br />
-					I have {new Date().getFullYear() - 2022} years of experience in software development, as well as a Master's in Computer Science from the Georgia Institute of Technology (Georgia Tech). I am currently working as a Software Engineer at Workiva, Inc.
+					I have {new Date().getFullYear() - 2022} years of experience in software development, as well as a Master&apos;s in Computer Science from the Georgia Institute of Technology (Georgia Tech). I am currently working as a Software Engineer at Workiva, Inc.
 					<br />
 					<br />
 					I have been fascinated with automobiles since childhood, and it has always been my dream to enter this industry one day. I dream of a
