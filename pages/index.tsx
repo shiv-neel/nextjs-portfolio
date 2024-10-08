@@ -62,7 +62,7 @@ export default function Home() {
 						</Button>
 					</Link>
 					<Link
-						href='https://www.overleaf.com/read/vzgkkknbkhqg'
+						href='https://docs.google.com/document/d/12iTW0tNEyxBhdT787ZEcmuGVzu2hLKqXn5b1J-9LQ_k/edit?usp=sharing'
 						passHref
 					>
 						<a target='_blank'>

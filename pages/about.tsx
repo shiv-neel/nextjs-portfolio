@@ -18,21 +18,16 @@ const About = () => {
 				className='flex mx-auto mb-6 items-center gap-3'
 			>
 				<CgUser />
-				About Me 
+				About Me
 			</Heading>
 			<Box>
 				<p className='mt-2 leading-relaxed'>
-				👋🏾 Hey there, I&apos;m Shiv!
-				<br/><br/>
-				I&apos;m currently in my final semester of
-					my computer science bachelor&apos;s degree at Iowa State University. I
-					currently intern at Workiva, Inc. as a Software Engineer, and have a
-					total of <strong>2 years work experience</strong>. I plan to get a
-					Master&apos;s degree in Business Administration (MBA) within the next
-					few years to learn how to effectively build and manage teams.
+					👋🏾 Hey there, I&apos;m Shiva!
+					<br /><br />
+					I have {new Date().getFullYear() - 2022} years of experience in software development, as well as a Master's in Computer Science from the Georgia Institute of Technology (Georgia Tech). I am currently working as a Software Engineer at Workiva, Inc.
 					<br />
 					<br />
-					I have been fascinated with automobiles since childhood. I dream of a
+					I have been fascinated with automobiles since childhood, and it has always been my dream to enter this industry one day. I dream of a
 					future in which vehicles are 100% safe for us, and
 					sustainable for our grandchildren, without compromise on the pursuit of driving. While many may
 					dismiss this vision as naive optimism, I would argue that we are
@@ -49,9 +44,9 @@ const About = () => {
 						target='_blank'
 						rel='noreferrer'
 					>
-						rather inefficient internal combustion process. 
+						rather inefficient internal combustion process.
 					</a> {' '}Not to mention, many of these vehicles are way quicker
-						and look even cooler than their predecessors!
+					and look even cooler than their predecessors!
 					<br />
 					<br />
 					I&apos;m extremely grateful to be alive during this &apos;automotive

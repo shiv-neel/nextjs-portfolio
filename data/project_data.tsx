@@ -21,6 +21,16 @@ export const PROJECT_DATA: ProjectCardType[] = [
     //     stack: ['React', 'Typescript', 'Next.js', 'MongoDB', 'Go', 'AWS']
     // },
     {
+        title: 'AI Trading Software',
+        description:
+            <p>Python app that uses an ensemble of regression and classification learners to simulate a paper-trading portfolio and predict trends in the U.S. stock market (NYSE). </p>,
+        dates: 'Aug 2024 - Present',
+        stack: [{ label: 'Python', color: 'yellow' }, { label: 'Typescript', color: 'blue' }],
+        // github: 'https://github.com/shiv-neel/pathfinder-v2',
+        // demo: 'https://pathviz.vercel.app',
+        hasDivider: true
+    },
+    {
         title: 'Pathfinding Visualizer',
         description:
             <p>Feature-rich React web application with a 2D grid, enabling users to interactively visualize and analyze graph algorithms,

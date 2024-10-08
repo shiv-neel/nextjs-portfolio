@@ -25,34 +25,47 @@ const Experience: NextPage = () => {
 				Resume
 			</Heading>
 			<Box>
-				<Link href='https://www.overleaf.com/read/vzgkkknbkhqg' passHref>
-					<a target='_blank'>
-						<Button
-							className='flex gap-7 items-center w-60 h-20'
-							style={{ padding: '25px' }}
-							colorScheme='messenger'
-							textColor={colorMode === 'dark' ? 'black' : 'white'}
-						>
-							<FaDownload className='bg-transparent' />
-							<p className='bg-transparent'>Download PDF</p>
-						</Button></a>
-				</Link>
 				<Box>
+
 					<Box className='mt-10'>
 						<p className='text-3xl mt-10 font-bold'>Education</p>
 						<Divider className='my-5' />
+						<Box className='my-7'>
+							<Box className='flex items-center gap-10 w-full'>
+								<p className='text-2xl font-semibold mb-2'>
+									Georgia Institute of Technology
+								</p>
+							</Box>
+
+							<p className='text-lg font-semibold mb-1'>
+								M.S. Computer Science
+							</p>
+							<p className='mb-2 flex justify-between'>
+								{/* <p className='text-gray-400'>Aug 2019 - Dec 2023</p> */}
+								<p className='text-gray-400'>Atlanta, GA</p>
+							</p>
+							<p className='leading-relaxed'>
+								{' '}
+								<li>
+									<strong>GPA:</strong> 4.00/4.00
+								</li>
+								<li>
+									<strong>Specialization:</strong> Machine Learning
+								</li>
+							</p>
+						</Box>
 						<Box>
 							<Box className='flex items-center gap-10 w-full'>
-								<p className='text-2xl font-semibold mb-5'>
+								<p className='text-2xl font-semibold mb-2'>
 									Iowa State University
 								</p>
 							</Box>
 
-							<p className='text-lg font-semibold mb-2'>
-								Bachelor of Science in Computer Science
+							<p className='text-lg font-semibold mb-1'>
+								B.S. Computer Science
 							</p>
 							<p className='mb-2 flex justify-between'>
-								<p className='text-gray-400'>Aug 2019 - Dec 2023</p>
+								{/* <p className='text-gray-400'>Aug 2019 - Dec 2023</p> */}
 								<p className='text-gray-400'>Ames, IA</p>
 							</p>
 							<p className='leading-relaxed'>
